@@ -1,7 +1,7 @@
 {
   "name": "aws-browser",
   "version": "1.0.0",
-  "description": "Note: if you are looking for the original, view-only version of this tool then please visit the [S3 Explorer](https://github.com/awslabs/aws-js-s3-explorer) page.",
+  "description": "AWS Browser",
   "main": "main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
