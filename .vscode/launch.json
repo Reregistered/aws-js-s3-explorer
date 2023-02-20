@@ -3,24 +3,25 @@
   // Hover to view descriptions of existing attributes.
   // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
   "version": "0.2.0",
-  "configurations": [    
+  "configurations": [
     {
       "name": "Electron Main",
       "program": "${workspaceFolder}/main.js",
       "request": "launch",
       "runtimeExecutable": "${workspaceFolder}/node_modules/.bin/electron",
-      "skipFiles": [
-        "<node_internals>/**"
-      ],
+      "skipFiles": ["<node_internals>/**"],
       "type": "node"
     },
     {
-      "name": "Debug App (Edge)",
+      "name": "Debug App (Chrome)",
       "request": "launch",
-      "type": "edge",
+      "type": "chrome",
       "url": "${workspaceFolder}/index.html",
       "webRoot": "${workspaceFolder}",
-      "runtimeArgs": [],
-    },
-]
+      "runtimeArgs": [
+        "--disable-web-security",
+        "--js-flags='--max_old_space_size=8192'"
+      ]
+    }
+  ]
 }
